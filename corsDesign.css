@@ -1,0 +1,43 @@
+ 
+ #container { 
+        height:700px; width:1000px; margin-left:auto; margin-right:auto
+    }
+  
+  <!-- /*顶部面板样式*/ -->
+    #top {
+        width:100%;
+        height:25px;
+        border:1px #F00 solid;
+		margin:1px
+    }
+	
+		#cityList_container{font-size:12px; width:40%;height:100%;float:left;}
+		
+		.button_01{		
+			width:12%;
+			height:100%
+			border:2px #F00 solid;		
+		}
+	
+    <!-- /*中间部分面板样式*/ -->
+    #allmap {
+        width:100%;
+        height:85%;
+        border:1px #F00 solid;
+    }	
+	
+   <!--  /*底部面板样式*/ -->
+    #footer {
+        width:100%;
+        height:25px;
+        border:1px #F00 solid;
+		margin:1px;
+		float：left;		
+    }
+	
+		.button_02 {
+			width:12%;
+			height:100%
+			border:10px #F00 solid;
+			margin-left:500ps;
+		}

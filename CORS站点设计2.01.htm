@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- CORS站点设计 1.0
+
+主要功能：
+
+1、获取给定区域的边界；
+2、可连续标注设计点，并保存为文件；
+3、可将保存的标注点展示在地图上；
+4、可右击删除地图、和文件中（需点击“保存标注点”）的标注；
+4、因涉及到文件操作，所以此版本只能在IE中运行
+
+<!-- CORS站点设计 1.0
+
+增加功能：
+
+1、增加城市列表；
+2、可根据城市列表，自动生成省、地区、市等的边界；
+3、可根据城市列表，自动标注省、地区、市等；
+
+<!-- CORS站点设计 2.0
+
+增加功能：
+
+1、优化了界面显示；
+ -->
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	
+	<link href="corsDesign.css" type="text/css" rel="stylesheet">
+	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=XROfryAQNEe0hYbECXTCY6hY"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/DistanceTool/1.2/src/DistanceTool_min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/MarkerTool/1.2/src/MarkerTool.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/CityList/1.4/src/CityList.js"></script>	
+	
+	<title>CORS站点设计 2.01 </title>
+</head>
+<body>
+
+	<div id="container">
+	
+		<div id="top">智能选点		
+			<div id="cityList_container"></div>
+			
+			<input type="button" class = button_01 onclick="showBoundary();" value="区域边界" />
+			<input type="button" class = button_01 onclick="show_subBoundary();" value="下级区域边界" />
+			
+			<input type="button" class = button_01 onclick="show_AreaMarker();" value="标注区域" />
+			
+			<input type="button" class = button_01 onclick="showRange();" value="基站覆盖范围" />
+		</div>			
+		
+		<div id="allmap"></div>			
+		
+		<div id="footer">人工选点			
+			<input type="button" class = button_02 value="开始标注" onclick="mkrTool.open()" />	
+			<input type="button" class = button_02 value="停止标注" onclick="mkrTool.close()" />
+					
+			<input type="button" class = button_02 onclick="clear_AllDesign();" value="删除所有标注" />
+			<input type="button" class = button_02onclick="saveMarkers();" value="保存标注" />			
+			
+			<input type="button" class = button_02 onclick="showMarkers();" value="打开标注文件" />
+			
+			<input type="button" class = button_02 onclick="measure();" value="测距" />
+			<input type="button" class = button_02 onclick="search();" value="搜索" />
+		</div>
+    </div>
+
+	<script type="text/javascript" src="corsDesign.js"></script>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+
+</script>
