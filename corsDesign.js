@@ -96,7 +96,7 @@
 			if(allMarkers[i].toString() == "[object Marker]")
 			{
 				var point = allMarkers[i].getPosition();
-				var circle = new BMap.Circle(point,100000,{strokeColor:"blue", strokeWeight:5, strokeOpacity:0.5});		
+				var circle = new BMap.Circle(point,35000,{strokeColor:"Green", strokeWeight:5, strokeOpacity:0.5,fillColor:'None'});		
 				map.addOverlay(circle); 
 			}			
 		}
@@ -131,7 +131,7 @@
 	//显示选择的区域边界
 	function showBoundary()	
 	{
-		getBoundary(sel_Area,5,randomColor());
+		getBoundary(sel_Area,5,"Red");
 		map.centerAndZoom(sel_AreaGeo, 7);		
 	}
 	
@@ -191,7 +191,7 @@
 			}
           	var pointArray = [];
 			for (var i = 0; i < count; i++) {
-				var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: nWeight, strokeColor: nColor}); //建立多边形覆盖物 #ff0000
+				var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: nWeight, strokeColor: nColor,fillColor:'None'}); //建立多边形覆盖物 #ff0000
 				map.addOverlay(ply);  //添加覆盖物
 				pointArray = pointArray.concat(ply.getPath());
 			}    
